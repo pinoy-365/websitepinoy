@@ -26,14 +26,41 @@
 
     *{box-sizing:border-box}
 
-    body{
-      margin:0;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background:
-        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
-        url('https://www.pinoy365.bet/img/common-bg.95368801.jpg') center/cover no-repeat fixed;
-      color:var(--text);
-    }
+   body{
+  margin:0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background:
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+    url('https://www.pinoy365.bet/img/common-bg.95368801.jpg') center/cover no-repeat fixed;
+  color:var(--text);
+  position:relative;
+  overflow-x:hidden;
+}
+
+/* Subtle animated glow overlay */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(225,6,0,.12), transparent 40%),
+    radial-gradient(circle at 80% 60%, rgba(225,6,0,.08), transparent 45%);
+  animation: floatGlow 12s ease-in-out infinite alternate;
+  pointer-events:none;
+  z-index:0;
+}
+
+@keyframes floatGlow{
+  from{ transform: translateY(0); }
+  to{ transform: translateY(-30px); }
+}
+
+/* Keep content above overlay */
+header, .container, footer{
+  position:relative;
+  z-index:1;
+}
+
 
     .container{
       max-width:1200px;
@@ -151,9 +178,36 @@
     @media(max-width:600px){
       header h1{font-size:2.4rem}
     }
+
+    .floating-register{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:5;
+  background:linear-gradient(135deg,var(--red),#ff3b3b);
+  color:#fff;
+  padding:14px 22px;
+  border-radius:50px;
+  font-weight:700;
+  text-decoration:none;
+  box-shadow:0 12px 35px rgba(225,6,0,.6);
+  animation:pulse 2.2s infinite;
+}
+
+@keyframes pulse{
+  0%{ transform:scale(1); }
+  50%{ transform:scale(1.06); }
+  100%{ transform:scale(1); }
+}
+
   </style>
 </head>
 <body>
+<a class="floating-register"
+   href="https://www.pinoy365.bet/register?affiliateCode=websitepinoy"
+   target="_blank">
+  Register Now
+</a>
 
 <header>
   <h1>Pinoy365</h1>
