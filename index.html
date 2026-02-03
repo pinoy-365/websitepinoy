@@ -1,318 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pinoy365 | Register & Play</title>
-  <link rel="icon" type="image/png"
-      href="https://images.8830532.com/wsd-images-prod/tkgemtlbf7/fe_setting/web_logo/wps_t2_20251128150659.png">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pinoy365 | Register & Play</title>
 
+<link rel="icon" type="image/png"
+href="https://images.8830532.com/wsd-images-prod/tkgemtlbf7/fe_setting/web_logo/wps_t2_20251128150659.png">
 
-  <!-- SEO META TAGS -->
-  <meta name="description" content="Pinoy365 official affiliate page. Mag-register at maglaro ng online casino, slots, at sports betting. May bonus, fast payouts, at trusted ng mga Pinoy." />
-  <meta name="keywords" content="Pinoy365, Pinoy365 register, online casino Philippines, Pinoy betting, slots PH, sports betting PH" />
-  <meta name="robots" content="index, follow" />
+<!-- SEO -->
+<meta name="description" content="Pinoy365 official affiliate page. Mag-register at maglaro ng online casino, slots, at sports betting. May bonus, fast payouts, at trusted ng mga Pinoy." />
+<meta name="keywords" content="Pinoy365, Pinoy365 register, online casino Philippines, Pinoy betting" />
+<meta name="robots" content="index, follow" />
 
-  <!-- SOCIAL PREVIEW -->
-  <meta property="og:title" content="Pinoy365 | Trusted Online Gaming for Pinoys" />
-  <meta property="og:description" content="Sumali sa Pinoy365 gamit ang official affiliate link. May welcome bonus, daily promos, at mabilis na payouts." />
-  <meta property="og:type" content="website" />
+<!-- Open Graph -->
+<meta property="og:title" content="Pinoy365 | Trusted Online Gaming for Pinoys" />
+<meta property="og:description" content="May welcome bonus, daily promos, at mabilis na payouts." />
+<meta property="og:type" content="website" />
 
-  <style>
-    :root{
-      --red:#e10600;
-      --black:#0b0b0b;
-      --dark:#141414;
-      --text:#ffffff;
-      --muted:#b3b3b3;
-    }
-
-    *{box-sizing:border-box}
-
-   body{
-  margin:0;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background:
-    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
-    url('https://www.pinoy365.bet/img/common-bg.95368801.jpg') center/cover no-repeat fixed;
-  color:var(--text);
-  position:relative;
-  overflow-x:hidden;
+<style>
+:root{
+--red:#e10600;--black:#0b0b0b;--dark:#141414;
+--text:#fff;--muted:#b3b3b3;
 }
-
-/* Subtle animated glow overlay */
+*{box-sizing:border-box}
+body{
+margin:0;font-family:'Segoe UI',Arial,sans-serif;
+background:
+linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.85)),
+url('https://www.pinoy365.bet/img/common-bg.95368801.jpg') center/cover fixed;
+color:var(--text);overflow-x:hidden;
+}
 body::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  background:
-    radial-gradient(circle at 20% 20%, rgba(225,6,0,.12), transparent 40%),
-    radial-gradient(circle at 80% 60%, rgba(225,6,0,.08), transparent 45%);
-  animation: floatGlow 12s ease-in-out infinite alternate;
-  pointer-events:none;
-  z-index:0;
+content:"";position:fixed;inset:0;
+background:
+radial-gradient(circle at 20% 20%, rgba(225,6,0,.12), transparent 40%),
+radial-gradient(circle at 80% 60%, rgba(225,6,0,.08), transparent 45%);
+animation:floatGlow 12s infinite alternate;
+pointer-events:none;z-index:0;
+}
+@keyframes floatGlow{to{transform:translateY(-30px)}}
+header,.container,footer{position:relative;z-index:1}
+header{text-align:center;padding:80px 20px}
+header h1{font-size:3rem;color:var(--red)}
+.site-logo{max-width:260px;margin:20px auto}
+.cta a{
+background:linear-gradient(135deg,var(--red),#ff3b3b);
+color:#fff;padding:16px 36px;border-radius:50px;
+font-weight:700;text-decoration:none;
+box-shadow:0 10px 30px rgba(225,6,0,.4);
+transition:.3s;display:inline-block;
+}
+.cta a:hover{transform:translateY(-3px) scale(1.03)}
+.container{max-width:1200px;margin:auto;padding:40px 20px}
+section{margin:70px 0}
+h2{text-align:center;margin-bottom:40px}
+.grid{
+display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+.card{
+background:linear-gradient(180deg,#161616,#0f0f0f);
+padding:30px;border-radius:18px;text-align:center;
+border:1px solid rgba(255,255,255,.05);transition:.3s;
+}
+.card:hover{transform:translateY(-6px);border-color:var(--red)}
+.card h3{color:var(--red)}
+.steps{max-width:700px;margin:auto;color:var(--muted)}
+.steps li{margin:12px 0}
+.disclaimer{
+background:#111;padding:30px;border-radius:16px;
+max-width:900px;margin:auto;color:var(--muted);
+}
+footer{background:#050505;padding:30px;color:var(--muted);text-align:center}
+
+/* Floating Register */
+.floating-register{
+position:fixed;right:18px;bottom:18px;
+background:linear-gradient(135deg,var(--red),#ff3b3b);
+padding:14px 22px;border-radius:50px;
+font-weight:700;color:#fff;text-decoration:none;
+box-shadow:0 12px 35px rgba(225,6,0,.6);
+animation:pulse 2.2s infinite;z-index:10;
+opacity:.92;
+}
+.floating-register:hover{opacity:1;transform:scale(1.08)}
+@keyframes pulse{50%{transform:scale(1.06)}}
+
+/* Telegram Floating */
+.telegram{
+position:fixed;left:18px;bottom:18px;
+background:#0088cc;padding:14px 20px;
+border-radius:50px;color:#fff;
+font-weight:700;text-decoration:none;
+z-index:10;
 }
 
-@keyframes floatGlow{
-  from{ transform: translateY(0); }
-  to{ transform: translateY(-30px); }
-}
-
-/* Keep content above overlay */
-header, .container, footer{
-  position:relative;
-  z-index:1;
-}
-
-
-    .container{
-      max-width:1200px;
-      margin:auto;
-      padding:40px 20px;
-    }
-
-    header{
-      text-align:center;
-      padding:80px 20px;
-      background: linear-gradient(180deg, rgba(225,6,0,0.15), transparent);
-    }
-
-    header h1{
-      font-size:3.2rem;
-      margin-bottom:15px;
-      color:var(--red);
-      letter-spacing:1px;
-    }
-
-    header p{
-      font-size:1.2rem;
-      color:var(--muted);
-      margin-bottom:35px;
-    }
-
-    .cta a{
-      background:linear-gradient(135deg,var(--red),#ff3b3b);
-      color:#fff;
-      padding:16px 36px;
-      font-size:1.15rem;
-      font-weight:700;
-      border-radius:50px;
-      text-decoration:none;
-      box-shadow:0 10px 30px rgba(225,6,0,.4);
-      transition:.3s ease;
-      display:inline-block;
-    }
-
-    .cta a:hover{
-      transform:translateY(-3px) scale(1.03);
-      box-shadow:0 15px 40px rgba(225,6,0,.6);
-    }
-
-    section{margin:70px 0}
-
-    h2{
-      text-align:center;
-      font-size:2.2rem;
-      margin-bottom:40px;
-      color:#fff;
-    }
-
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:25px;
-    }
-
-    .card{
-      background:linear-gradient(180deg,#161616,#0f0f0f);
-      border-radius:18px;
-      padding:30px 25px;
-      text-align:center;
-      border:1px solid rgba(255,255,255,.05);
-      transition:.3s ease;
-    }
-
-    .card:hover{
-      transform:translateY(-6px);
-      border-color:var(--red);
-    }
-
-    .card h3{color:var(--red);margin-bottom:12px}
-    .card p{color:var(--muted);font-size:1rem}
-
-    #countdown{
-      text-align:center;
-      font-size:1.8rem;
-      font-weight:700;
-      color:var(--red);
-      margin-bottom:40px;
-    }
-
-    .steps{
-      max-width:700px;
-      margin:auto;
-      font-size:1.1rem;
-      color:var(--muted);
-    }
-
-    .steps li{margin:12px 0}
-
-    footer{
-      background:#050505;
-      border-top:1px solid rgba(255,255,255,.05);
-      padding:30px 20px;
-      font-size:.9rem;
-      color:var(--muted);
-      text-align:center;
-    }
-
-    .disclaimer{
-      background:#111;
-      border:1px solid rgba(255,255,255,.06);
-      border-radius:16px;
-      padding:30px;
-      max-width:950px;
-      margin:auto;
-      font-size:.95rem;
-      line-height:1.7;
-      color:var(--muted);
-    }
-
-    @media(max-width:600px){
-      header h1{font-size:2.4rem}
-    }
-
-    .floating-register{
-  position:fixed;
-  right:18px;
-  bottom:18px;
-  z-index:5;
-  background:linear-gradient(135deg,var(--red),#ff3b3b);
-  color:#fff;
-  padding:14px 22px;
-  border-radius:50px;
-  font-weight:700;
-  text-decoration:none;
-  box-shadow:0 12px 35px rgba(225,6,0,.6);
-  animation:pulse 2.2s infinite;
-}
-
-@keyframes pulse{
-  0%{ transform:scale(1); }
-  50%{ transform:scale(1.06); }
-  100%{ transform:scale(1); }
-}
-
-    .site-logo{
-  max-width:280px;
-  width:100%;
-  height:auto;
-  margin-bottom:20px;
-  filter: drop-shadow(0 6px 18px rgba(0,0,0,.6));
-}
-
+/* Mobile Top CTA */
+.mobile-cta{display:none}
 @media(max-width:600px){
-  .site-logo{
-    max-width:220px;
-  }
+.mobile-cta{
+display:block;position:fixed;top:0;left:0;right:0;
+background:#e10600;text-align:center;
+padding:12px;z-index:20;
 }
-
-  </style>
+.mobile-cta a{color:#fff;font-weight:700;text-decoration:none}
+}
+</style>
 </head>
+
 <body>
 
-  <script>
-  (function(d,t) {
-    var BASE_URL="https://app.chatwoot.com";
-    var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-    g.src=BASE_URL+"/packs/js/sdk.js";
-    g.async = true;
-    s.parentNode.insertBefore(g,s);
-    g.onload=function(){
-      window.chatwootSDK.run({
-        websiteToken: 'T1AM6jtmWw6ZfoSBQVaj3UZz',
-        baseUrl: BASE_URL
-      })
-    }
-  })(document,"script");
-</script>
-
-
+<!-- Mobile CTA -->
+<div class="mobile-cta">
+<a href="https://www.pinoy365.bet/register?affiliateCode=websitepinoy" target="_blank">
+🎁 Register & Get Bonus
+</a>
+</div>
 
 <header>
-  <h1>Pinoy365</h1>
-  <img 
-  src="https://images.8830532.com/wsd-images-prod/tkgemtlbf7/fe_setting/web_logo/wps_t2_20251128150659.png"
-  alt="Pinoy365 Logo"
-  class="site-logo"
-/>
-
-  <p>Trusted Online Gaming Platform para sa mga Pinoy 🇵🇭</p>
-  <div class="cta">
-    <a href="https://www.pinoy365.bet/register?affiliateCode=websitepinoy" target="_blank">Mag‑Register Ngayon</a>
-  </div>
+<h1>Pinoy365</h1>
+<img src="https://images.8830532.com/wsd-images-prod/tkgemtlbf7/fe_setting/web_logo/wps_t2_20251128150659.png" class="site-logo">
+<p>Trusted Online Gaming Platform para sa mga Pinoy 🇵🇭</p>
+<div class="cta">
+<a href="https://www.pinoy365.bet/register?affiliateCode=websitepinoy" target="_blank">
+Mag-Register Ngayon
+</a>
+</div>
 </header>
 
 <div class="container">
 
 <section>
-  <h2>🔥 Limited‑Time Bonus</h2>
-  <p style="text-align:center;color:var(--muted)">Huwag palampasin — exclusive offer para sa bagong members</p>
-  <div id="countdown"></div>
+<h2>🔥 Limited-Time Bonus</h2>
+<div id="countdown" style="text-align:center;font-size:1.8rem;color:var(--red)"></div>
 </section>
 
 <section>
-  <h2>Bakit Pinoy365?</h2>
-  <div class="grid">
-    <div class="card"><h3>🎮 Maraming Games</h3><p>Casino, slots, sports betting at marami pang iba sa isang platform.</p></div>
-    <div class="card"><h3>💸 Fast Payouts</h3><p>Mabilis at maaasahang withdrawals para sa panalo mo.</p></div>
-    <div class="card"><h3>📱 Mobile Ready</h3><p>Optimized sa Android at iOS — play anytime, anywhere.</p></div>
-  </div>
+<h2>⭐ Bakit Trusted ng mga Pinoy?</h2>
+<div class="grid">
+<div class="card"><h3>🔒 SSL Secured</h3><p>Encrypted at safe ang lahat ng transactions.</p></div>
+<div class="card"><h3>👥 Libu-libong Players</h3><p>Maraming Pinoy ang araw-araw na naglalaro.</p></div>
+<div class="card"><h3>🤝 24/7 Support</h3><p>Live chat at Telegram support anytime.</p></div>
+</div>
 </section>
 
 <section>
-  <h2>⭐ Bakit Trusted ng mga Pinoy?</h2>
-  <div class="grid">
-    <div class="card"><h3>🇵🇭 Pinoy‑Focused</h3><p>User‑friendly at madaling gamitin para sa Filipino players.</p></div>
-    <div class="card"><h3>🏦 Local Payments</h3><p>Compatible sa popular local payment methods.</p></div>
-    <div class="card"><h3>🤝 Reliable Support</h3><p>Responsive customer support kapag kailangan mo.</p></div>
-  </div>
+<h2>💬 Telegram Customer Support</h2>
+<div class="card">
+<p>May tanong o concern? I-message kami sa Telegram:</p>
+<a href="https://t.me/pinoy365customerservice1" target="_blank" style="color:#00bfff;font-weight:700">
+👉 @pinoy365customerservice1
+</a>
+</div>
 </section>
 
 <section>
-  <h2>Paano Mag‑Start</h2>
-  <ol class="steps">
-    <li>I‑click ang <strong>Mag‑Register Ngayon</strong></li>
-    <li>Punan ang registration form</li>
-    <li>Mag‑deposit at i‑claim ang bonus</li>
-    <li>Maglaro at mag‑enjoy 🎉</li>
-  </ol>
+<h2>❓ FAQ</h2>
+<div class="grid">
+<div class="card"><h3>Paano mag-withdraw?</h3><p>Request lang sa account at mabilis ang processing.</p></div>
+<div class="card"><h3>Safe ba?</h3><p>Yes, secured at trusted ng maraming Pinoy.</p></div>
+<div class="card"><h3>May bonus ba?</h3><p>Oo, may welcome at daily promos.</p></div>
+</div>
 </section>
 
 <section>
-  <h2>🧾 Responsible Gaming</h2>
-  <div class="disclaimer">
-    <p><strong>Disclaimer:</strong> Ang page na ito ay affiliate promotional site lamang ng Pinoy365 at hindi opisyal na operator.</p>
-    <p><strong>18+ Only.</strong> Maglaro nang responsable at ayon sa iyong kakayahang pinansyal.</p>
-  </div>
+<h2>🧾 Responsible Gaming</h2>
+<div class="disclaimer">
+<p><strong>18+ Only.</strong> Affiliate promotional site lamang ito.</p>
+</div>
 </section>
 
 </div>
 
 <footer>
-  © 2026 Pinoy365 Affiliate | Powered by <strong>websitepinoy</strong>
+© <span id="year"></span> Pinoy365 Affiliate | Powered by <strong>websitepinoy</strong>
 </footer>
 
+<!-- Floating Buttons -->
+<a class="floating-register" href="https://www.pinoy365.bet/register?affiliateCode=websitepinoy" target="_blank">
+Register 🎁
+</a>
+
+<a class="telegram" href="https://t.me/pinoy365customerservice1" target="_blank">
+Telegram 💬
+</a>
+
 <script>
-  const end = new Date(); end.setHours(end.getHours()+24);
-  function tick(){
-    const d=end-new Date();
-    if(d<=0){document.getElementById('countdown').innerHTML='Promo Ended';return}
-    const h=Math.floor(d/36e5),m=Math.floor(d%36e5/6e4),s=Math.floor(d%6e4/1e3);
-    document.getElementById('countdown').innerHTML=`${h}h ${m}m ${s}s`;
-  }
-  setInterval(tick,1000); tick();
+// Persistent Countdown
+let end = localStorage.getItem("promoEnd");
+if(!end){
+let d=new Date();d.setHours(d.getHours()+24);
+localStorage.setItem("promoEnd",d);
+end=d;
+}else{end=new Date(end)}
+
+function tick(){
+let diff=end-new Date();
+if(diff<=0){countdown.innerHTML="Promo Ended";return}
+let h=Math.floor(diff/36e5),
+m=Math.floor(diff%36e5/6e4),
+s=Math.floor(diff%6e4/1e3);
+countdown.innerHTML=`${h}h ${m}m ${s}s`;
+}
+setInterval(tick,1000);tick();
+
+// Footer year
+document.getElementById("year").textContent=new Date().getFullYear();
 </script>
+
+<!-- Hidden SEO Content -->
+<section style="display:none">
+<h2>Pinoy365 Online Casino Philippines</h2>
+<p>Pinoy365 ay online casino at sports betting platform para sa mga Pinoy.</p>
+</section>
 
 </body>
 </html>
