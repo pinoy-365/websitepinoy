@@ -8,85 +8,67 @@
 <link rel="icon" type="image/png"
 href="https://images.8830532.com/wsd-images-prod/tkgemtlbf7/fe_setting/web_logo/wps_t2_20251128150659.png">
 
-<!-- SEO -->
-<meta name="description" content="Pinoy365 official affiliate page. Register now and get bonus. Trusted by Pinoys with fast payouts." />
-<meta name="keywords" content="Pinoy365, online casino Philippines, betting PH" />
+<meta name="description" content="Pinoy365 official affiliate page. Register now or install app. Trusted by Pinoys." />
 <meta property="og:image" content="https://www.pinoy365.bet/img/common-bg.95368801.jpg" />
 
 <style>
 :root{
---red:#e10600;--black:#0b0b0b;--dark:#141414;
---text:#fff;--muted:#b3b3b3;
+--red:#e10600;--dark:#111;--muted:#b3b3b3;
 }
-*{box-sizing:border-box}
 body{
-margin:0;font-family:'Segoe UI',Arial,sans-serif;
-background:
-linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.9)),
+margin:0;font-family:'Segoe UI',Arial;
+background:linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.9)),
 url('https://www.pinoy365.bet/img/common-bg.95368801.jpg') center/cover fixed;
-color:#fff;overflow-x:hidden;
-padding-top:60px;
+color:#fff;padding-top:60px;
 }
 
 /* TOP BAR */
 .topbar{
 position:fixed;top:0;left:0;right:0;
 background:#e10600;text-align:center;
-padding:12px;z-index:1000;font-weight:700;
+padding:12px;font-weight:700;z-index:1000;
 }
 .topbar a{color:#fff;text-decoration:none}
 
 /* HEADER */
 header{text-align:center;padding:70px 20px}
-header h1{font-size:3rem;color:#e10600}
+header h1{color:#e10600}
 .site-logo{max-width:240px}
 
 /* CTA */
 .cta a{
-background:linear-gradient(135deg,#e10600,#ff3b3b);
-padding:16px 36px;border-radius:50px;
-color:#fff;font-weight:700;text-decoration:none;
-display:inline-block;
-box-shadow:0 0 25px rgba(225,6,0,.6);
-animation:shake 2s infinite;
+background:#e10600;padding:14px 30px;
+border-radius:40px;color:#fff;
+font-weight:700;text-decoration:none;
+display:inline-block;margin:5px;
+}
+
+/* APK BUTTON */
+.apk-btn{
+background:#00c853;
 }
 
 /* GRID */
 .container{max-width:1100px;margin:auto;padding:20px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
-.card{
-background:#111;padding:25px;border-radius:15px;
-border:1px solid rgba(255,255,255,.05);
-text-align:center;
-}
-.card h3{color:#e10600}
+.card{background:#111;padding:25px;border-radius:15px;text-align:center}
 
-/* FLOAT BUTTON */
+/* FLOAT */
 .float-btn{
 position:fixed;right:20px;bottom:20px;
-background:#e10600;color:#fff;
-padding:15px 25px;border-radius:50px;
-font-weight:700;text-decoration:none;
+background:#e10600;color:#fff;padding:15px 25px;
+border-radius:50px;text-decoration:none;font-weight:700;
 z-index:999;
-box-shadow:0 10px 30px rgba(225,6,0,.6);
-animation:pulse 2s infinite;
+}
+.float-apk{
+bottom:80px;background:#00c853;
 }
 
 /* TELEGRAM */
 .telegram{
 position:fixed;left:20px;bottom:20px;
 background:#0088cc;padding:14px 20px;
-border-radius:50px;color:#fff;
-text-decoration:none;font-weight:700;
-z-index:999;
-}
-
-/* ANIMATIONS */
-@keyframes pulse{50%{transform:scale(1.08)}}
-@keyframes shake{
-0%,100%{transform:translateX(0)}
-25%{transform:translateX(-2px)}
-75%{transform:translateX(2px)}
+border-radius:50px;color:#fff;text-decoration:none;
 }
 
 /* POPUP */
@@ -95,15 +77,19 @@ display:none;position:fixed;inset:0;
 background:rgba(0,0,0,.9);
 z-index:2000;align-items:center;justify-content:center;
 }
-.popup-box{
-background:#111;padding:30px;border-radius:20px;text-align:center;
+.popup-box{background:#111;padding:30px;border-radius:20px;text-align:center}
+
+/* INSTALL BAR */
+#installBar{
+display:none;position:fixed;bottom:0;left:0;right:0;
+background:#111;padding:15px;text-align:center;
+z-index:2000;
 }
 </style>
 </head>
 
 <body>
 
-<!-- TOP BAR -->
 <div class="topbar">
 <a href="https://pinoy365agent.pinoy365.bet/register.html" target="_blank">
 🎁 LIMITED BONUS – REGISTER NOW
@@ -117,98 +103,115 @@ background:#111;padding:30px;border-radius:20px;text-align:center;
 <p>🔥 <span id="players">143</span> players playing now</p>
 
 <div class="cta">
+
 <a href="https://pinoy365agent.pinoy365.bet/register.html" target="_blank">
-REGISTER NOW
+🎁 REGISTER
 </a>
+
+<div id="apkSection" style="display:none">
+<a href="https://median.co/share/pwzajyb#apk" class="apk-btn">
+📲 INSTALL APP
+</a>
+<p style="font-size:0.8rem;color:#b3b3b3">
+✔ Safe APK | ✔ No Virus | ✔ Fast Install
+</p>
+</div>
+
 </div>
 
 <p style="color:#ff3b3b;font-weight:700">
 ⚠️ Only <span id="slots">27</span> bonus slots left!
 </p>
 
-<div id="countdown" style="font-size:1.5rem;color:#00ffcc"></div>
+<div id="countdown" style="color:#00ffcc"></div>
 
 </header>
 
 <div class="container">
 
 <section>
-<h2>🎯 Why Join Now?</h2>
+<h2>🎯 Why Join?</h2>
 <div class="grid">
-<div class="card"><h3>🎁 Bonus</h3><p>Instant rewards</p></div>
-<div class="card"><h3>⚡ Fast Withdraw</h3><p>Minutes processing</p></div>
-<div class="card"><h3>📱 Mobile Ready</h3><p>Play anytime</p></div>
+<div class="card">🎁 Bonus</div>
+<div class="card">⚡ Fast Withdraw</div>
+<div class="card">📱 Mobile Ready</div>
 </div>
 </section>
 
 <section>
-<h2>💬 Player Reviews</h2>
+<h2>💬 Reviews</h2>
 <div class="grid">
-<div class="card"><p>"Legit payout!"</p><strong>- Mark</strong></div>
-<div class="card"><p>"Solid bonus!"</p><strong>- Jessa</strong></div>
-<div class="card"><p>"Fast support!"</p><strong>- Carlo</strong></div>
-</div>
-</section>
-
-<section>
-<h2>💳 Payments</h2>
-<div style="text-align:center">
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/GCash_logo.svg" width="120">
-<img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Maya_logo.svg" width="120">
+<div class="card">"Legit payout!"</div>
+<div class="card">"Solid bonus!"</div>
+<div class="card">"Fast support!"</div>
 </div>
 </section>
 
 </div>
 
-<!-- FLOAT BUTTON -->
-<a class="float-btn" href="https://pinoy365agent.pinoy365.bet/register.html" target="_blank">
-REGISTER 🎁
-</a>
-
-<a class="telegram" href="https://t.me/pinoy365customerservice1" target="_blank">
-Telegram 💬
-</a>
+<!-- FLOAT BUTTONS -->
+<a class="float-btn" href="https://pinoy365agent.pinoy365.bet/register.html">REGISTER</a>
+<a class="float-btn float-apk" href="https://median.co/share/pwzajyb#apk">INSTALL</a>
+<a class="telegram" href="https://t.me/pinoy365customerservice1">Telegram</a>
 
 <!-- POPUP -->
 <div id="popup">
 <div class="popup-box">
-<h2 style="color:#e10600">🎁 CLAIM BONUS</h2>
-<p>Register now before it’s gone!</p>
+<h2 style="color:#e10600">🎁 Play Now</h2>
+
 <a href="https://pinoy365agent.pinoy365.bet/register.html" target="_blank"
-style="background:#e10600;color:#fff;padding:12px 25px;border-radius:30px;text-decoration:none;font-weight:700">
-Register
-</a><br><br>
+style="background:#e10600;color:#fff;padding:12px 25px;border-radius:30px;text-decoration:none;display:block;margin:10px">
+🎁 Register
+</a>
+
+<a href="https://median.co/share/pwzajyb#apk"
+style="background:#00c853;color:#fff;padding:12px 25px;border-radius:30px;text-decoration:none;display:block;margin:10px">
+📲 Install App
+</a>
+
 <button onclick="popup.style.display='none'" style="background:none;border:none;color:#aaa">Close</button>
 </div>
 </div>
 
+<!-- INSTALL BAR -->
+<div id="installBar">
+<p>📲 Install App for better experience</p>
+<a href="https://median.co/share/pwzajyb#apk"
+style="background:#00c853;color:#fff;padding:10px 20px;border-radius:20px;text-decoration:none">
+Install Now
+</a>
+</div>
+
 <script>
+// Android detect
+if(/Android/i.test(navigator.userAgent)){
+document.getElementById("apkSection").style.display="block";
+document.getElementById("installBar").style.display="block";
+}
+
 // Countdown
 let end=new Date();end.setHours(end.getHours()+24);
-function tick(){
+setInterval(()=>{
 let diff=end-new Date();
 let h=Math.floor(diff/36e5),
 m=Math.floor(diff%36e5/6e4),
 s=Math.floor(diff%6e4/1e3);
 countdown.innerHTML=`⏳ ${h}h ${m}m ${s}s left`;
-}
-setInterval(tick,1000);
+},1000);
 
-// Players counter
+// Players
 setInterval(()=>{
-let el=document.getElementById("players");
-el.innerText=parseInt(el.innerText)+Math.floor(Math.random()*3);
+players.innerText=parseInt(players.innerText)+Math.floor(Math.random()*3);
 },3000);
 
-// Slots decreasing
+// Slots
 setInterval(()=>{
-let el=document.getElementById("slots");
-let num=parseInt(el.innerText);
-if(num>5) el.innerText=num-1;
+let n=parseInt(slots.innerText);
+if(n>5) slots.innerText=n-1;
 },8000);
 
-// Auto popup
-setTimeout(()=>{popup.style.display="flex"},5000);
+// Popup
+setTimeout(()=>popup.style.display="flex",5000);
 
 // Exit intent
 document.addEventListener("mouseout",e=>{
